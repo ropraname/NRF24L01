@@ -19,6 +19,8 @@
 #define RADIO_CE 2
 #define RADIO_IRQ 3
 
+// Поскольку функции для работы с csn не предполагается использовать в иных файлах, их можно объявить static
+
 // Выбирает активное состояние (высокий уровень) на линии CE
 inline void radio_assert_ce() {
 	RADIO_PORT |= (1 << RADIO_CE); // Установка высокого уровня на линии CE
@@ -28,8 +30,6 @@ inline void radio_assert_ce() {
 inline void radio_deassert_ce() {
 	RADIO_PORT &= ~(1 << RADIO_CE); // Установка низкого уровня на линии CE
 }
-
-// Поскольку функции для работы с csn не предполагается использовать в иных файлах, их можно объявить static
 
 // Выбирает активное состояние (низкий уровень) на линии CSN
 inline static void csn_assert() {

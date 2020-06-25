@@ -10,10 +10,10 @@
 #ifndef BASE_NRF_H_
 #define BASE_NRF_H_
 
-inline void radio_assert_ce();
-inline void radio_deassert_ce();
-inline static void csn_assert();
-inline static void csn_deassert();
+//inline void radio_assert_ce();
+//inline void radio_deassert_ce();
+//inline static void csn_assert();
+//inline static void csn_deassert();
 void radio_init();
 uint8_t radio_read_buf(uint8_t cmd, uint8_t *buf, uint8_t count);
 uint8_t radio_write_buf(uint8_t cmd, uint8_t *buf, uint8_t count);

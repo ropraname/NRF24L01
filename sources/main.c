@@ -12,6 +12,25 @@
 #include "defining.h"
 #include <util/delay.h>
 
+
+#define RADIO_PORT PORTD
+#define RADIO_DDR DDRD
+#define RADIO_PIN PIND
+
+#define RADIO_CSN 1
+#define RADIO_CE 2
+#define RADIO_IRQ 3
+
+// Выбирает активное состояние (высокий уровень) на линии CE
+inline void radio_assert_ce() {
+	RADIO_PORT |= (1 << RADIO_CE); // Установка высокого уровня на линии CE
+}
+
+// Выбирает неактивное состояние (низкий уровень) на линии CE
+inline void radio_deassert_ce() {
+	RADIO_PORT &= ~(1 << RADIO_CE); // Установка низкого уровня на линии CE
+}
+
 // Помещает пакет в очередь отправки.
 // buf - буфер с данными, size - длина данных (от 1 до 32)
 uint8_t send_data(uint8_t *buf, uint8_t size) {
