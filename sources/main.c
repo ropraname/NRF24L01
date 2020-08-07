@@ -12,7 +12,6 @@
 #include "defining.h"
 #include <util/delay.h>
 
-
 #define RADIO_PORT PORTD
 #define RADIO_DDR DDRD
 #define RADIO_PIN PIND
@@ -20,6 +19,12 @@
 #define RADIO_CSN 1
 #define RADIO_CE 2
 #define RADIO_IRQ 3
+
+// Вызывается, когда превышено число попыток отправки, а подтверждение так и не было получено.
+void on_send_error() {
+	// TODO здесь можно описать обработчик неудачной отправки
+
+}
 
 // Выбирает активное состояние (высокий уровень) на линии CE
 inline void radio_assert_ce() {
@@ -79,6 +84,8 @@ void check_radio() {
 
 // Основной цикл
 int main(void) {
+	uint8_t buf = 1;
+	uint8_t size = 1;
 	radio_init();
 	while (!radio_start()) {
 		_delay_ms(1000);
@@ -88,9 +95,10 @@ int main(void) {
 	_delay_ms(2);
 
 	radio_assert_ce();
-
 	for (;;) {
 		check_radio();
+		send_data(buf, size);
+		_delay_ms(100);
 
 		// TODO здесь основной код программы
 	}

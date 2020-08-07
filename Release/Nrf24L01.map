@@ -128,7 +128,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x498
+.text           0x00000000      0x4a2
  *(.vectors)
  .vectors       0x00000000       0x8c c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr51/crtatmega128.o
                 0x00000000                __vector_default
@@ -277,39 +277,39 @@ END GROUP
                 0x000003ec       0x74 ./sources/main.o
                 0x000003ec                check_radio
  .text.startup.main
-                0x00000460       0x34 ./sources/main.o
+                0x00000460       0x3e ./sources/main.o
                 0x00000460                main
  .text.libgcc.mul
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
- .text.libgcc   0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+ .text.libgcc   0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
- .text.libgcc   0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
-                0x00000494                . = ALIGN (0x2)
+                0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_copy_data.o)
+                0x0000049e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000494        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
-                0x00000494                _exit
-                0x00000494                exit
+ .fini9         0x0000049e        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+                0x0000049e                _exit
+                0x0000049e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -328,11 +328,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000494        0x4 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
+ .fini0         0x0000049e        0x4 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr51\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000498                _etext = .
+                0x000004a2                _etext = .
 
-.data           0x00800100        0xa load address 0x00000498
+.data           0x00800100        0xa load address 0x000004a2
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/users/ysatt/eclipse/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr51/crtatmega128.o
@@ -362,8 +362,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x00000498                __data_load_start = LOADADDR (.data)
-                0x000004a2                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000004a2                __data_load_start = LOADADDR (.data)
+                0x000004ac                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080010a        0x0
                 [!provide]                PROVIDE (__noinit_start, .)

@@ -31,56 +31,56 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 LSS += \
-Nrf24L01.lss \
+Nrf24L01_T.lss \
 
 FLASH_IMAGE += \
-Nrf24L01.hex \
+Nrf24L01_T.hex \
 
 EEPROM_IMAGE += \
-Nrf24L01.eep \
+Nrf24L01_T.eep \
 
 SIZEDUMMY += \
 sizedummy \
 
 
 # All Target
-all: Nrf24L01.elf secondary-outputs
+all: Nrf24L01_T.elf secondary-outputs
 
 # Tool invocations
-Nrf24L01.elf: $(OBJS) $(USER_OBJS)
+Nrf24L01_T.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,Nrf24L01.map -mmcu=atmega128 -o "Nrf24L01.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,Nrf24L01_T.map -mmcu=atmega128 -o "Nrf24L01_T.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-Nrf24L01.lss: Nrf24L01.elf
+Nrf24L01_T.lss: Nrf24L01_T.elf
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S Nrf24L01.elf  >"Nrf24L01.lss"
+	-avr-objdump -h -S Nrf24L01_T.elf  >"Nrf24L01_T.lss"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Nrf24L01.hex: Nrf24L01.elf
+Nrf24L01_T.hex: Nrf24L01_T.elf
 	@echo 'Create Flash image (ihex format)'
-	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Nrf24L01.elf  "Nrf24L01.hex"
+	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Nrf24L01_T.elf  "Nrf24L01_T.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Nrf24L01.eep: Nrf24L01.elf
+Nrf24L01_T.eep: Nrf24L01_T.elf
 	@echo 'Create eeprom image (ihex format)'
-	-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Nrf24L01.elf  "Nrf24L01.eep"
+	-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Nrf24L01_T.elf  "Nrf24L01_T.eep"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy: Nrf24L01.elf
+sizedummy: Nrf24L01_T.elf
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega128 Nrf24L01.elf
+	-avr-size --format=avr --mcu=atmega128 Nrf24L01_T.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(EEPROM_IMAGE)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) Nrf24L01.elf
+	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(EEPROM_IMAGE)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) Nrf24L01_T.elf
 	-@echo ' '
 
 secondary-outputs: $(LSS) $(FLASH_IMAGE) $(EEPROM_IMAGE) $(SIZEDUMMY)
